@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Towards Expressive Video Dubbing with Multiscale Multimodal Context Interaction</title>
+		<link type="text/css" href="./css/basic.css" rel="stylesheet">
+		<link type="text/css" href="./css/index.css" rel="stylesheet">
+		<link type="text/css" href="./css/bootstrap.min.css" rel="stylesheet">
+		<script type='text/javascript' src="./js/jquery-3.3.1.min.js"></script>
+		<script type='text/javascript' src="./js/index.js"></script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="title">
+				<img class="top-img" src="img/background.png" />
+				<span>Towards Expressive Video Dubbing with Multiscale Multimodal Context Interaction</span>
+			</div>
+			<div class="content">
+				<div class="section author">
+				</div>
+				<div class="section">
+					<div class="section-title">ABSTRACT</div>
+					<div class="section-content abstract">
+						Automatic Video Dubbing (AVD) generates speech
+						aligned with lip motion and facial emotion from scripts. Recent
+						research focuses on modeling multimodal context to enhance
+						prosody expressiveness but overlooks two key issues: 1) Multiscale prosody expression attributes in the context influence
+						the current sentence’s prosody. 2) Prosody cues in context
+						interact with the current sentence, impacting the final prosody
+						expressiveness. To tackle these challenges, we propose M2CIDubber, a Multiscale Multimodal Context Interaction scheme
+						for AVD. This scheme includes two shared M2CI encoders to
+						model the multiscale multimodal context and facilitate its deep
+						interaction with the current sentence. By extracting global and
+						local features for each modality in the context, utilizing attention-based mechanisms for aggregation and interaction, and employing an interaction-based graph attention network for fusion,
+						the proposed approach enhances the prosody expressiveness
+						of synthesized speech for the current sentence. Experiments
+						on the Chem dataset show our model outperforms baselines
+						in dubbing expressiveness. The code and demos are available at <a href="https://github.com/XiaoYuanJun-zy/ICASSP2025-M2CI-Dubber"><span  style="color: #1d5da4; ">https://github.com/XiaoYuanJun-zy/ICASSP2025-M2CI-Dubber</span></a>.
+					</div>
+				</div>
+				
+				<div class="section">
+					<div class="section-title">MODEL ARCHITECTURE</div>
+					<div class="section-content model">
+						<img src="./img/model_fig_1.png" alt="" class="model-img">
+						
+						<p style="padding-top: 1rem; color: #a1a1a1; font-size: 1rem; text-align: center;">Figure: The proposed M2CI-Dubber contains two shared Multiscale Multimodal Context Interaction Encoders, a Text Encoder, and a Video Dubbing Synthesizer.</p>
+					</div>
+				</div>
+				
+				<div class="section">
+					<div class="section-title">EXPERIMENTS</div>
+					<div class="section-content experiments">
+						<!-- We develop four neural TTS systems for a  -->
+						<strong>Baselines:</strong>
+						</br> 1) <b>FastSpeech2</b> : a neural text-to-speech model.
+						</br> 2) <b>DSU-AVO</b> an AVD model whose learning objective is discrete speech unit prediction.
+						</br> 3) <b>HPMDubbing</b> an AVD model incorporating hierarchical prosody modeling by considering the current sentence’s face frames.
+						</br> 4) <b>MCDubber</b> an AVD model incorporating temporally concatenating the multimodal context.
+
+					</div>
+					<div class="section-content ">
+						<hr />
+						<div class="subsection-exp-2">
+							
+							<div>
+								
+							</div>
+							
+
+							<div class="module-content" style="margin-bottom: 30px;">
+
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   
+										</colgroup>
+										<tr>
+											<td colspan="7" style="text-align: left;">
+												<span style="color:rgb(0, 112, 192);">Previous sentence:</span> Let's look at both thermodynamic and kinetic influences on a chemical reaction.  <br>
+												<span style="color:rgb(146, 208, 80);">Current sentence:</span> So here's a simple chemical reaction, A going to B. <br>
+												<span style="color:rgb(0, 112, 192);">Following sentence:</span> And this is an elementary chemical reaction, which means what I've written here is actually what happens on a molecular level.
+											</td>										
+										</tr>
+										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
+										  <!-- <th colspan="1" style="text-align: center"><strong>Reconstruction</strong></th> -->
+										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 </strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DSU-AVO</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>HPMDubbing</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MCDubber</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">M2CI-Dubber </strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+
+											<td style="align: center; vertical-align: middle;" ><video src="./video/GT/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/vocoder_rec/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/Fastspeech2/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/DSU-AVO/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/HPMDubbing/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/MCDubber/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/Ours/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+									
+										</tr>
+									</tbody>
+								</table>
+
+								
+							</div>
+							
+							
+							
+							<!-- 一句话分割 -->
+							<div>
+								
+							</div>
+
+							<div class="module-content" style="margin-bottom: 30px;">
+							
+								<table id="table_4">	
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+							
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   
+										</colgroup>
+										<tr>
+											<td colspan="7" style="text-align: left;">
+												<span style="color:rgb(0, 112, 192);">Previous sentence:</span> Well, thermodynamics applies at equilibrium.  <br>
+												<span style="color:rgb(146, 208, 80);">Current sentence:</span> At equilibrium, the rate of the forward reaction and the rate of the reverse reaction are the same. <br>
+												<span style="color:rgb(0, 112, 192);">Following sentence:</span> That defines our equilibrium.
+											</td>										
+										</tr>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
+										  <!-- <th colspan="1" style="text-align: center"><strong>Reconstruction</strong></th> -->
+										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 </strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DSU-AVO</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>HPMDubbing</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MCDubber</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">M2CI-Dubber </strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+							
+											<td style="align: center; vertical-align: middle;" ><video src="./video/GT/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/vocoder_rec/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/Fastspeech2/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/DSU-AVO/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/HPMDubbing/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/MCDubber/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/Ours/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+									
+										</tr>
+									</tbody>
+								</table>
+							
+								
+
+								
+							</div>
+
+							<div class="module-content" style="margin-bottom: 30px;">
+							
+								<table id="table_4">	
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+							
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   
+										</colgroup>
+										<tr>
+											<td colspan="7" style="text-align: left;">
+												<span style="color:rgb(0, 112, 192);">Previous sentence:</span> They can add together.  <br>
+												<span style="color:rgb(146, 208, 80);">Current sentence:</span> The amplitude of a wave function can increase when electrons get close to each other. <br>
+												<span style="color:rgb(0, 112, 192);">Following sentence:</span> The amplitude increasing leads to a higher probability of finding electrons.
+											</td>										
+										</tr>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
+										  <!-- <th colspan="1" style="text-align: center"><strong>Reconstruction</strong></th> -->
+										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 </strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DSU-AVO</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>HPMDubbing</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MCDubber</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">M2CI-Dubber </strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+							
+											<td style="align: center; vertical-align: middle;" ><video src="./video/GT/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/vocoder_rec/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/Fastspeech2/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/DSU-AVO/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/HPMDubbing/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/MCDubber/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/Ours/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+									
+										</tr>
+									</tbody>
+								</table>
+							
+								
+							</div>
+							
+							
+							<!-- 一句话分割 -->
+
+							<div class="module-content" style="margin-bottom: 30px;">
+							
+								<table id="table_4">	
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+							
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   
+										</colgroup>
+										<tr>
+											<td colspan="7" style="text-align: left;">
+												<span style="color:rgb(0, 112, 192);">Previous sentence:</span> Let's look at the sublimation of iodine solid to form iodine gas that's occurring right here in front of me.  <br>
+												<span style="color:rgb(146, 208, 80);">Current sentence:</span> What I have for you is, I'm going to raise the temperature of the system. <br>
+												<span style="color:rgb(0, 112, 192);">Following sentence:</span> What happens to the color intensity of the iodine gas as the temperature is increased?
+											</td>										
+										</tr>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
+										  <!-- <th colspan="1" style="text-align: center"><strong>Reconstruction</strong></th> -->
+										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 </strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DSU-AVO</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>HPMDubbing</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MCDubber</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">M2CI-Dubber </strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+							
+											<td style="align: center; vertical-align: middle;" ><video src="./video/GT/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/vocoder_rec/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/Fastspeech2/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/DSU-AVO/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/HPMDubbing/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/MCDubber/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video/Ours/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+									
+										</tr>
+									</tbody>
+								</table>
+							
+								
+							</div>
+							
+							<!-- 一句话分割 -->
+							
+							<!-- 一句话分割 -->
+							
+						</div>
+						<hr />
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
