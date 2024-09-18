@@ -12,7 +12,7 @@
 	<body>
 		<div class="main">
 			<div class="title">
-				<img class="top-img" src="img/background.png" />
+				<img class="top-img"  src="img/background.png" />
 				<span>Towards Expressive Video Dubbing with Multiscale Multimodal Context Interaction</span>
 			</div>
 			<div class="content">
@@ -83,12 +83,6 @@
 										   <col width=20%></col>
 										   
 										</colgroup>
-										<tr>
-											<td colspan="7" style="text-align: left;">
-												<span style="color:rgb(0, 112, 192);">Previous sentence:</span> Let's look at both thermodynamic and kinetic influences on a chemical reaction.  <br>
-												<span style="color:rgb(146, 208, 80);">Current sentence:</span> So here's a simple chemical reaction, A going to B. <br>
-												<span style="color:rgb(0, 112, 192);">Following sentence:</span> And this is an elementary chemical reaction, which means what I've written here is actually what happens on a molecular level.
-											</td>										
 										</tr>
 										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
@@ -99,8 +93,16 @@
 										  <th colspan="1" style="text-align: center"><strong>MCDubber</strong></th>
 										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">M2CI-Dubber </strong></th>
 										</tr>
+										<tr>
+											<td colspan="7" style="text-align: left;">
+												<span style="color:rgb(0, 112, 192);">Previous sentence:</span> Let's look at both thermodynamic and kinetic influences on a chemical reaction.  <br>
+												<span style="color:rgb(146, 208, 80);">Current sentence:</span> So here's a simple chemical reaction, A going to B. <br>
+												<span style="color:rgb(0, 112, 192);">Following sentence:</span> And this is an elementary chemical reaction, which means what I've written here is actually what happens on a molecular level.
+											</td>										
+
 									</thead>
 									<tbody>
+
 										<tr>
 
 											<td style="align: center; vertical-align: middle;" ><video src="./video/GT/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
@@ -113,6 +115,28 @@
 									
 										</tr>
 									</tbody>
+									<tbody>
+										<tr>
+											
+											<tr>
+												<td colspan="7" style="text-align: left;">
+													
+													<span style="color:rgb(146, 208, 80);">Current sentence:</span> So here's a simple chemical reaction, A going to B. 
+													
+												</td>										
+											</tr>
+									
+											<td style="align: center; vertical-align: middle;" ><video src="./video_single/GT/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/vocoder_rec/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/Fastspeech2/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/DSU-AVO/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/HPMDubbing/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/MCDubber/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/Ours/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
+									
+										</tr>
+									</tbody>
+								
 								</table>
 
 								
@@ -141,13 +165,6 @@
 										   
 										</colgroup>
 										<tr>
-											<td colspan="7" style="text-align: left;">
-												<span style="color:rgb(0, 112, 192);">Previous sentence:</span> Well, thermodynamics applies at equilibrium.  <br>
-												<span style="color:rgb(146, 208, 80);">Current sentence:</span> At equilibrium, the rate of the forward reaction and the rate of the reverse reaction are the same. <br>
-												<span style="color:rgb(0, 112, 192);">Following sentence:</span> That defines our equilibrium.
-											</td>										
-										</tr>
-										<tr>
 										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
 										  <!-- <th colspan="1" style="text-align: center"><strong>Reconstruction</strong></th> -->
@@ -157,11 +174,19 @@
 										  <th colspan="1" style="text-align: center"><strong>MCDubber</strong></th>
 										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">M2CI-Dubber </strong></th>
 										</tr>
+										<tr>
+											<td colspan="7" style="text-align: left;">
+												<span style="color:rgb(0, 112, 192);">Previous sentence:</span> Well, thermodynamics applies at equilibrium.  <br>
+												<span style="color:rgb(146, 208, 80);">Current sentence:</span> At equilibrium, the rate of the forward reaction and the rate of the reverse reaction are the same. <br>
+												<span style="color:rgb(0, 112, 192);">Following sentence:</span> That defines our equilibrium.
+											</td>										
+										</tr>
+
 									</thead>
 									<tbody>
 										<tr>
 							
-											<td style="align: center; vertical-align: middle;" ><video src="./video/GT/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="align: center; vertical-align: middle;" ><video src="./video_single/GT/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
 											<td style="text-align: center"><video src="./video/vocoder_rec/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
 											<td style="text-align: center"><video src="./video/Fastspeech2/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
 											<td style="text-align: center"><video src="./video/DSU-AVO/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
@@ -171,6 +196,29 @@
 									
 										</tr>
 									</tbody>
+									
+									<tbody>
+										<tr>
+											<td colspan="7" style="text-align: left;">
+												
+												<span style="color:rgb(146, 208, 80);">Current sentence:</span> At equilibrium, the rate of the forward reaction and the rate of the reverse reaction are the same. <br>
+												
+											</td>										
+										</tr>
+										<tr>
+																
+											<td style="align: center; vertical-align: middle;" ><video src="./video_single/GT/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/vocoder_rec/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/Fastspeech2/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/DSU-AVO/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/HPMDubbing/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/MCDubber/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/Ours/LYwud0w-upg-009.mp4" controls="" preload="" width="215"></video></td>
+									
+										</tr>
+									</tbody>
+
+
 								</table>
 							
 								
@@ -194,13 +242,6 @@
 										   
 										</colgroup>
 										<tr>
-											<td colspan="7" style="text-align: left;">
-												<span style="color:rgb(0, 112, 192);">Previous sentence:</span> They can add together.  <br>
-												<span style="color:rgb(146, 208, 80);">Current sentence:</span> The amplitude of a wave function can increase when electrons get close to each other. <br>
-												<span style="color:rgb(0, 112, 192);">Following sentence:</span> The amplitude increasing leads to a higher probability of finding electrons.
-											</td>										
-										</tr>
-										<tr>
 										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
 										  <!-- <th colspan="1" style="text-align: center"><strong>Reconstruction</strong></th> -->
@@ -210,6 +251,14 @@
 										  <th colspan="1" style="text-align: center"><strong>MCDubber</strong></th>
 										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">M2CI-Dubber </strong></th>
 										</tr>
+										<tr>
+											<td colspan="7" style="text-align: left;">
+												<span style="color:rgb(0, 112, 192);">Previous sentence:</span> They can add together.  <br>
+												<span style="color:rgb(146, 208, 80);">Current sentence:</span> The amplitude of a wave function can increase when electrons get close to each other. <br>
+												<span style="color:rgb(0, 112, 192);">Following sentence:</span> The amplitude increasing leads to a higher probability of finding electrons.
+											</td>										
+										</tr>
+
 									</thead>
 									<tbody>
 										<tr>
@@ -221,6 +270,27 @@
 											<td style="text-align: center"><video src="./video/HPMDubbing/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
 											<td style="text-align: center"><video src="./video/MCDubber/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
 											<td style="text-align: center"><video src="./video/Ours/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+									
+										</tr>
+									</tbody>
+									
+									<tbody>
+										<tr>
+											<td colspan="7" style="text-align: left;">
+												
+												<span style="color:rgb(146, 208, 80);">Current sentence:</span> The amplitude of a wave function can increase when electrons get close to each other. <br>
+												
+											</td>										
+										</tr>
+										<tr>
+																
+											<td style="align: center; vertical-align: middle;" ><video src="./video_single/GT/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/vocoder_rec/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/Fastspeech2/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/DSU-AVO/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/HPMDubbing/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/MCDubber/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/Ours/mgg27LTeNPo-009.mp4" controls="" preload="" width="215"></video></td>
 									
 										</tr>
 									</tbody>
@@ -248,13 +318,6 @@
 										   
 										</colgroup>
 										<tr>
-											<td colspan="7" style="text-align: left;">
-												<span style="color:rgb(0, 112, 192);">Previous sentence:</span> Let's look at the sublimation of iodine solid to form iodine gas that's occurring right here in front of me.  <br>
-												<span style="color:rgb(146, 208, 80);">Current sentence:</span> What I have for you is, I'm going to raise the temperature of the system. <br>
-												<span style="color:rgb(0, 112, 192);">Following sentence:</span> What happens to the color intensity of the iodine gas as the temperature is increased?
-											</td>										
-										</tr>
-										<tr>
 										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
 										  <!-- <th colspan="1" style="text-align: center"><strong>Reconstruction</strong></th> -->
@@ -264,6 +327,14 @@
 										  <th colspan="1" style="text-align: center"><strong>MCDubber</strong></th>
 										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">M2CI-Dubber </strong></th>
 										</tr>
+										<tr>
+											<td colspan="7" style="text-align: left;">
+												<span style="color:rgb(0, 112, 192);">Previous sentence:</span> Let's look at the sublimation of iodine solid to form iodine gas that's occurring right here in front of me.  <br>
+												<span style="color:rgb(146, 208, 80);">Current sentence:</span> What I have for you is, I'm going to raise the temperature of the system. <br>
+												<span style="color:rgb(0, 112, 192);">Following sentence:</span> What happens to the color intensity of the iodine gas as the temperature is increased?
+											</td>										
+										</tr>
+
 									</thead>
 									<tbody>
 										<tr>
@@ -275,6 +346,26 @@
 											<td style="text-align: center"><video src="./video/HPMDubbing/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
 											<td style="text-align: center"><video src="./video/MCDubber/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
 											<td style="text-align: center"><video src="./video/Ours/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+									
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td colspan="7" style="text-align: left;">
+
+												<span style="color:rgb(146, 208, 80);">Current sentence:</span> What I have for you is, I'm going to raise the temperature of the system. <br>
+
+											</td>										
+										</tr>
+										<tr>
+																
+											<td style="align: center; vertical-align: middle;" ><video src="./video_single/GT/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/vocoder_rec/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/Fastspeech2/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/DSU-AVO/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/HPMDubbing/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/MCDubber/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
+											<td style="text-align: center"><video src="./video_single/Ours/VzvinAckmQU-001.mp4" controls="" preload="" width="215"></video></td>
 									
 										</tr>
 									</tbody>
