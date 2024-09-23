@@ -27,7 +27,7 @@
 						prosody expressiveness but overlooks two key issues: 1) Multiscale prosody expression attributes in the context influence
 						the current sentence’s prosody. 2) Prosody cues in context
 						interact with the current sentence, impacting the final prosody
-						expressiveness. To tackle these challenges, we propose M2CIDubber, a Multiscale Multimodal Context Interaction scheme
+						expressiveness. To tackle these challenges, we propose M2CI-Dubber, a Multiscale Multimodal Context Interaction scheme
 						for AVD. This scheme includes two shared M2CI encoders to
 						model the multiscale multimodal context and facilitate its deep
 						interaction with the current sentence. By extracting global and
@@ -83,6 +83,12 @@
 										   <col width=20%></col>
 										   
 										</colgroup>
+										<tr>
+											<td colspan="7" style="text-align: center;">
+												<span style="font-weight: bold; font-size: 1.2em;" >Sample 1 with context</span> 
+
+											</td>
+										</tr>	
 										</tr>
 										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
@@ -98,7 +104,8 @@
 												<span style="color:rgb(0, 112, 192);">Previous sentence:</span> Let's look at both thermodynamic and kinetic influences on a chemical reaction.  <br>
 												<span style="color:rgb(146, 208, 80);">Current sentence:</span> So here's a simple chemical reaction, A going to B. <br>
 												<span style="color:rgb(0, 112, 192);">Following sentence:</span> And this is an elementary chemical reaction, which means what I've written here is actually what happens on a molecular level.
-											</td>										
+											</td>
+										</tr>										
 
 									</thead>
 									<tbody>
@@ -114,6 +121,33 @@
 											<td style="text-align: center"><video src="./video/Ours/LYwud0w-upg-001.mp4" controls="" preload="" width="215"></video></td>
 									
 										</tr>
+									</tbody>
+								
+								</table>
+								
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+								
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   
+										</colgroup>
+										<tr>
+											<td colspan="7" style="text-align: center;">
+												<span style="font-weight: bold; font-size: 1.2em;" >Sample 1 without context</span> 
+								
+											</td>
+										</tr>	
+
+									<tbody>
+								
+
 									</tbody>
 									<tbody>
 										<tr>
@@ -165,6 +199,12 @@
 										   
 										</colgroup>
 										<tr>
+											<td colspan="7" style="text-align: center;">
+												<span style="font-weight: bold; font-size: 1.2em;" >Sample 2 with context</span> 
+										
+											</td>
+										</tr>
+										<tr>
 										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
 										  <!-- <th colspan="1" style="text-align: center"><strong>Reconstruction</strong></th> -->
@@ -197,6 +237,42 @@
 										</tr>
 									</tbody>
 									
+
+
+
+								</table>
+								
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+															
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   
+										</colgroup>
+										<tr>
+											<td colspan="7" style="text-align: center;">
+												<span style="font-weight: bold; font-size: 1.2em;" >Sample 2 without context</span> 
+										
+											</td>
+										</tr>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
+										  <!-- <th colspan="1" style="text-align: center"><strong>Reconstruction</strong></th> -->
+										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 </strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DSU-AVO</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>HPMDubbing</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MCDubber</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">M2CI-Dubber </strong></th>
+										</tr>
+
+									
 									<tbody>
 										<tr>
 											<td colspan="7" style="text-align: left;">
@@ -217,8 +293,8 @@
 									
 										</tr>
 									</tbody>
-
-
+								
+								
 								</table>
 							
 								
@@ -241,6 +317,12 @@
 										   <col width=20%></col>
 										   
 										</colgroup>
+										<tr>
+											<td colspan="7" style="text-align: center;">
+												<span style="font-weight: bold; font-size: 1.2em;" >Sample 3 with context</span> 
+										
+											</td>
+										</tr>
 										<tr>
 										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
@@ -273,6 +355,40 @@
 									
 										</tr>
 									</tbody>
+									
+
+								</table>
+								
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+															
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   
+										</colgroup>
+										<tr>
+											<td colspan="7" style="text-align: center;">
+												<span style="font-weight: bold; font-size: 1.2em;" >Sample 3 without context</span> 
+										
+											</td>
+										</tr>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
+										  <!-- <th colspan="1" style="text-align: center"><strong>Reconstruction</strong></th> -->
+										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 </strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DSU-AVO</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>HPMDubbing</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MCDubber</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">M2CI-Dubber </strong></th>
+										</tr>
+
 									
 									<tbody>
 										<tr>
@@ -318,6 +434,12 @@
 										   
 										</colgroup>
 										<tr>
+											<td colspan="7" style="text-align: center;">
+												<span style="font-weight: bold; font-size: 1.2em;" >Sample 4 with context</span> 
+										
+											</td>
+										</tr>
+										<tr>
 										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
 										  <!-- <th colspan="1" style="text-align: center"><strong>Reconstruction</strong></th> -->
@@ -349,12 +471,45 @@
 									
 										</tr>
 									</tbody>
+
+								</table>
+								
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+															
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   
+										</colgroup>
+										<tr>
+											<td colspan="7" style="text-align: center;">
+												<span style="font-weight: bold; font-size: 1.2em;" >Sample 4 without context</span> 
+										
+											</td>
+										</tr>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Ground-Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Mel Resynthesis</strong></th>
+										  <!-- <th colspan="1" style="text-align: center"><strong>Reconstruction</strong></th> -->
+										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 </strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DSU-AVO</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>HPMDubbing</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>MCDubber</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">M2CI-Dubber </strong></th>
+										</tr>
+
 									<tbody>
 										<tr>
 											<td colspan="7" style="text-align: left;">
-
+								
 												<span style="color:rgb(146, 208, 80);">Current sentence:</span> What I have for you is, I'm going to raise the temperature of the system. <br>
-
+								
 											</td>										
 										</tr>
 										<tr>
